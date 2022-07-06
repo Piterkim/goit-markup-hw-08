@@ -1,0 +1,63 @@
+.properties {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desktop {
+    padding-top: 95px;
+    padding-bottom: 45px;
+  }
+}
+
+.properties__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.properties__item {
+  width: 100%;
+  // max-width: 270px;
+  // &:not(:last-child) {
+  //   margin-right: 30px;
+  // }
+  &::before {
+    display: block;
+    content: "";
+    height: 120px;
+    background: #f5f4fa;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+  &:nth-child(1)::before {
+    background-image: url(../images/antenna1.svg);
+  }
+
+  &:nth-child(2)::before {
+    background-image: url(../images/clock2.svg);
+  }
+
+  &:nth-child(3)::before {
+    background-image: url(../images/diagram3.svg);
+  }
+
+  &:nth-child(4)::before {
+    background-image: url(../images/astronaut4.svg);
+  }
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+  }
+}
+
+.properties__title {
+  @include font(700, 14px, 1.14, 0.03em, null);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.properties__text {
+  color: var(--second-text-color);
+}

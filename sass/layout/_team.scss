@@ -1,0 +1,15 @@
+.team {
+  background-color: #f5f4fa;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desktop {
+    padding-top: 95px;
+    padding-bottom: 45px;
+  }
+}
+
+.team__title {
+  margin-bottom: 50px;
+}
